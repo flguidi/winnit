@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winnit - 4 en línea</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="iconos">
+            <img src="img/iconos/menu-hamburguesa.png" alt="Menú Hamburguesa" class="icon-hover" id="menu-hamburguesa">
+            <a href="index.html"><img src="img/iconos/logo-winnit.png" alt="Logo Winnit" id="logo-winnit"></a>
+        </div>
+        <div id="contenedor-buscador">
+            <input type="text" placeholder="Buscar">
+            <img src="img/iconos/lupa.png" alt="Ícono lupa" id="imagen-lupa">
+        </div>
+        <div class="iconos">
+            <img src="img/iconos/tarjetas-juegos/carrito-agregar.png" alt="Carrito de compras" class="imagen-iconos icon-hover" id="img-carrito">
+            <img src="img/iconos/perfil-desplegable/foto-de-perfil.png" alt="Perfil de usuario"
+                class="imagen-iconos icon-hover" id="icono-perfil">
+        </div>
+    </header>
+
+    <!-- Menú de categorías -->
+    <aside class="contenedor-menu-categorias">
+        <div class="menu-categorias">
+            <ul id="lista-categorias"></ul>
+        </div>
+    </aside>
+
+    <!-- Perfil desplegable -->
+    <aside id="contendor-perfil-desplegable">
+        <div class="perfil-desplegable">
+            <div id="cruz-salir">
+                <img src="img/iconos/perfil-desplegable/cruz-salir.png" alt="Cruz para cerrar menú" id="cerrar-perfil">
+            </div>
+            <div id="avatar-mail">
+                <img src="img/iconos/perfil-desplegable/foto-de-perfil.png" alt="Ávatar del usuario"
+                    id="foto-de-perfil">
+                <p id="nickname">@Pedro</p>
+                <p id="email">pedrito@gmail.com</p>
+            </div>
+            <div id="items-perfil-desplegable">
+                <ul>
+                    <li>
+                        <img src="img/iconos/perfil-desplegable/icono-de-perfil.png" alt="Ícono de perfil">
+                        <a href="#">
+                            <p>Mi perfil</p>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="img/iconos/perfil-desplegable/editar.png" alt="Ícono para editar perfil">
+                        <a href="#">
+                            <p>Editar perfil</p>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="img/iconos/perfil-desplegable/privacidad-de-la-cuenta.png"
+                            alt="Ícono para configurar la privacidad de la cuenta">
+                        <a href="#">
+                            <p>Privacidad de la cuenta</p>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="img/iconos/perfil-desplegable/configuracion.png"
+                            alt="Ícono para configurar la cuenta">
+                        <a href="#">
+                            <p>Configuración de la cuenta</p>
+                        </a>
+                    </li>
+                    <li id="cerrar-sesion">
+                        <img src="img/iconos/perfil-desplegable/logout.png" alt="Ícono para cerrar sesión">
+                        <a href="login.html">
+                            <p>Cerrar sesión</p>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="img/iconos/perfil-desplegable/soporte.png" alt="Ícono de soporte técnico">
+                        <a href="#">
+                            <p>Soporte</p>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="img/iconos/perfil-desplegable/descargar.png" alt="Ícono para descargar la aplicación">
+                        <a href="#">
+                            <p>Descargar aplicación</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="redes-sociales">
+                <a href="#">
+                    <img src="img/iconos/logo-facebook.png" alt="Facebook">
+                </a>
+                <a href="#">
+                    <img src="img/iconos/logo-instagram.png" alt="Instagram">
+                </a>
+                <a href="#">
+                    <img src="img/iconos/logo-youtube.png" alt="Youtube">
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Contenedor principal -->
+    <main id="juego">
+        <!-- Breadcrumbs -->
+        <nav id="bread-crumbs">
+            <ul>
+                <li><a href="index.html">Winnit</a></li>
+                <li><img src="img/iconos/flecha-breadcrumbs.png" alt=""></li>
+                <li><a href="index.html">Juegos clásicos</a></li>
+                <li><img src="img/iconos/flecha-breadcrumbs.png" alt=""></li>
+                <li><a href="juego.html">4 en linea</a></li>
+            </ul>
+        </nav>
+
+        <!-- Pantalla de juego -->
+        <section class="contenedor-pantalla-juego">
+            <div class="pantalla-juego" id="pantallaJuego">
+                <div class="previsualizacion">
+                    <img src="img/tarjetas/4enLinea.png" alt="" class="mini-portada-juego">
+                    <h2>X en línea</h2>
+                    <button id="btn-jugar-especial">jugar</button>
+                    <div id="animacion-carga" class="oculto"></div>
+                </div>
+                <div class="contenedor-modos-tablero oculto">
+                    <img id="logo-juego" src="img/pagina-juego/perros-vs-gatos/logo-juego.png" alt="logo del juego">
+                    <h2 class="title-config">Selecciona el tipo de tablero para comenzar a jugar</h2>
+                    <div id="grupo-opc-tablero">
+                        <button id="btn-opc1" class="btn-tipoTablero">4 en línea</button>
+                        <button id="btn-opc2" class="btn-tipoTablero">5 en línea</button>
+                        <button id="btn-opc3" class="btn-tipoTablero">6 en línea</button>
+                        <button id="btn-opc4" class="btn-tipoTablero">7 en línea</button>
+                    </div>
+                </div>
+                <div id="contenedor-configuracion-juego" class="oculto">
+                    <div class="info-tablero-seleccionado">Tablero: <span id="tablero-elegido"></span></div>
+                    <h2 class="title-config">Selecciona un bando</h2>
+                    <div id="contenedor-opc-equipo">
+                        <div class="caja-opc-equipo">
+                            <h3>Gatos</h3>
+                            <button class="btn-equipo" id="btn-equipo-gato">
+                                <img id="fichaPrincipalGato" src="img/pagina-juego/perros-vs-gatos/ficha-gato-1.png" alt="">
+                            </button>
+                            <button id="btnModificarFichaGato" class="btn-modificar-ficha">Cambiar ficha <img src="img/iconos/icono-flecha-corta.png" alt="" ></button>
+                            <div class="cajas-opc-fichas objInvisible" id="cajas-opc-fichas-gato">
+                                <button><img class="imgs-cat" src="img/pagina-juego/perros-vs-gatos/ficha-gato-1.png" alt=""></button>
+                                <button><img class="imgs-cat" src="img/pagina-juego/perros-vs-gatos/ficha-gato-2.png" alt=""></button>
+                                <button><img class="imgs-cat" src="img/pagina-juego/perros-vs-gatos/ficha-gato-3.png" alt=""></button>
+                            </div>
+                        </div>
+                        <h3>VS</h3>
+                        <div class="caja-opc-equipo">
+                            <h3>Perros</h3>
+                            <button class="btn-equipo" id="btn-equipo-perro">
+                                <img id="fichaPrincipalPerro" src="img/pagina-juego/perros-vs-gatos/ficha-perro-1.png" alt="">
+                            </button>
+                            <button id="btnModificarFichaPerro" class="btn-modificar-ficha">
+                                Cambiar ficha
+                                <img src="img/iconos/icono-flecha-corta.png" alt="">
+                                </button>
+                            <div class="cajas-opc-fichas objInvisible" id="cajas-opc-fichas-perro">
+                                <button><img class="imgs-dog" src="img/pagina-juego/perros-vs-gatos/ficha-perro-1.png" alt=""></button>
+                                <button><img class="imgs-dog" src="img/pagina-juego/perros-vs-gatos/ficha-perro-2.png" alt=""></button>
+                                <button><img class="imgs-dog" src="img/pagina-juego/perros-vs-gatos/ficha-perro-3.png" alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="caja-opc-volver-continuar">
+                        <button id="btn-volver-juego"><img src="img/pagina-juego/perros-vs-gatos/flecha-izquierda.png" alt="btn-volver atras"></button>
+                        <button id="btn-jugar-comenzar">Comenzar</button>
+                    </div>
+                </div>
+                <div class="oculto" id="contenedor-card-ganador">
+                    <h2 id="titulo-card-ganador">Ganador</h2>
+                    <img id="img-ganador" src="" alt="">
+                    <p id="text-ganador"></p>
+                    <div class="btns-card-resultado">
+                        <button class="botones-juego-canvas" id="btn-card-reset"><img src="img/pagina-juego/perros-vs-gatos/flecha-btn-juego.png" alt="Flecha para reiniciar el juego"></button>
+                        <button class="botones-juego-canvas" id="btn-card-volver-config"><img src="img/pagina-juego/perros-vs-gatos/home-btn-juego.png" alt="ícono para volver al Home"></button>
+                    </div>    
+                </div>
+                <!-- Canvas del juego -->
+                <div id="contenedor-canvas-juego">
+                    <div id="contenedor-botones-canvas-juego">
+                        <button class="botones-juego-canvas" id="btn-reset"><img src="img/pagina-juego/perros-vs-gatos/flecha-btn-juego.png" alt="Flecha para reiniciar el juego"></button>
+                        <!-- mensaje de confirmacion para accionar -->
+                        <div id="contenedor-mensaje-confirmacion" class="oculto">
+                            <h2>¿Esta seguro de reiniciar la partida?</h2>
+                            <div id="grupo-opc-confirmacion">
+                                <button id="btn-confirmacion-no">No</button>
+                                <button id="btn-confirmacion-si">Si</button>
+                            </div>
+                        </div>
+                        <button class="botones-juego-canvas" id="btn-pause"><img src="img/pagina-juego/perros-vs-gatos/reproduciendo-btn-juego.png" alt="ícono para pausar el juego" id="img-estado-juego"></button>
+                        <button class="botones-juego-canvas" id="btn-home"><img src="img/pagina-juego/perros-vs-gatos/home-btn-juego.png" alt="ícono para volver al Home"></button>
+                    </div>
+                    <canvas id="canvas" class="oculto"></canvas>
+                </div>
+
+                <!-- Contenedor de instrucciones del juego -->
+                <section id="caja-instrucciones" class="contenedor-controles-juego">
+                    <div class="reglas-contenedor">
+                        <h1 class="titulo-reglas">Reglas</h1>
+                        <hr>
+                        <button id="btn-cerrar-instrucciones"><img src="img/iconos/perfil-desplegable/cruz-salir.png"
+                                alt="btn cerrar instrucciones"></button>
+                    </div>
+                    <div class="caja-reglas">
+                        <img src="img/pagina-juego/regla-1.png" alt="">
+                        <p> <span class="negrita">Para ganar, debes conectar al menos X fichas formando una línea recta.</span> Las líneas pueden ser verticales, horizontales o diagonales.
+                        </p>
+                    </div>
+                    <div class="caja-reglas">
+                        <img src="img/pagina-juego/regla-2.png" alt="">
+                        <p> <span class="negrita">Las flechas resaltadas indican la zona permitida para dejar caer las fichas.</span>
+                            Por fuera de esa zona no es valido el movimiento</p>
+                    </div>
+                    <div class="caja-reglas">
+                        <img src="img/pagina-juego/regla-3.png" alt="">
+                        <p><span class="negrita">Las fichas del jugador que tiene el turno estaran resaltadas</span></p>
+                    </div>
+                        <h3>¡Ya puedes empezar!</h3>
+                </section>
+            </div>
+            <nav class="nav-juego">
+                <a href="index.html"><img src="img/iconos/logo-winnit.png" alt="Logo Winnit" id="logo-winnit"></a>
+                <div class="opciones-juego">
+                    <img id="opc-corazon" src="img/iconos/comentarios-juego/icono-corazon.png" alt="mg">
+                    <hr>
+                    <img id="opc-instrucciones" src="img/iconos/icono-control.png"
+                        alt="informacion de controles de juego">
+                    <hr>
+                    <img id="opc-expandir" src="img/iconos/comentarios-juego/icono-expandir.png"
+                        alt="expandir pantalla">
+                </div>
+            </nav>
+        </section>
+
+        <!-- Descripción del juego -->
+        <section class="contenedor-descripcion-juego">
+            <div class="opciones-compartir">
+                <ul id="lista-items-compartir" class="hidden">
+                    <li><img src="img/iconos/mail.png" alt=""></li>
+                    <li><img src="img/iconos/link.png" alt=""></li>
+                    <li><img src="img/iconos/icono-compartir-facebook.png" alt=""></li>
+                    <li><img src="img/iconos/logo-instagram.png" alt=""></li>
+                </ul>
+                <button id="btn-compartir-juego"><img class="icono-compartir" src="img/iconos/icono-compartir.png"
+                        alt=""></button>
+            </div>
+            <img id="info-4-en-linea" src="img/tarjetas/4enLinea.png" alt="portada del juego">
+            <div class="contenedor-informacion-juego">
+                <div class="titulo-descripcion">
+                    <h2>X en linea</h2>
+                    <div class="caja-valoracion-juego">
+                        <img id="img-estrella" class="filtro-oscuro" src="img/iconos/icono-estrella-descripcion.png"
+                            alt="estrellita">
+                        <p>4.0</p>
+                    </div>
+                </div>
+                <div class="texto-descricion">
+                    <p>Disfruta de un juego que combina la simplicidad de sus reglas con una profundidad estratégica
+                        sorprendente. Conecta cuatro o mas fichas en una fila dependiendo el tablero elegido, de forma vertical, horizontal o diagonal, y demuestra tu
+                        habilidad para planificar y anticipar los movimientos de tu adversario. ¡La diversión está
+                        garantizada!</p>
+                    <p>Elige tu bando favorito y sumergete en este emocionante juego de x en línea.</p>
+                    <p class="detalles-descripcion">Autor: <span class="letra-cursiva">Pro Gamers</span></p>
+                    <p>Fecha de publicación: <span class="letra-cursiva">14/09/2024</span></p>
+                </div>
+                <section class="contenedor-videos-recomendados">
+                    <h3>Videos ilustrativos</h3>
+                    <ul class="lista-videos">
+                        <li>
+                            <figure class="video-recomendado">
+                                <img src="img/iconos/tarjetas-juegos/jugar.png" alt="video recomendado">
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="video-recomendado">
+                                <img src="img/iconos/tarjetas-juegos/jugar.png" alt="video recomendado">
+                            </figure>
+                        </li>
+                        <li>
+                            <figure class="video-recomendado">
+                                <img src="img/iconos/tarjetas-juegos/jugar.png" alt="video recomendado">
+                            </figure>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+
+        <!-- Carrusel de juegos relacionados -->
+        <section class="contenedor-juegos-relacionados">
+            <div class="categoria" data-tipo="clasicos">
+                <h1>Juegos Relacionados</h1>
+                <div class="carrusel"></div>
+            </div>
+        </section>
+
+        <!-- Comentarios -->
+        <section id="contenedor-seccion-comentarios">
+            <div id="contenedor-comentarios">
+                <div>
+                    <div id="contenedor-titulo">
+                        <div>
+                            <h1>Comentarios</h1>
+                        </div>
+                        <div id="acceder-comentarios">
+                            <a href="login.html">
+                                <p>Acceder</p>
+                            </a>
+                            <img src="img/iconos/comentarios-juego/circulo-acento.png"
+                                alt="Círculo para destacar palabra">
+                        </div>
+                    </div>
+                </div>
+                <div id="caja-comentarios">
+                    <div id="caja-avatar">
+                        <img src="img/iconos/perfil-desplegable/foto-de-perfil.png" alt="Avatar con imágen de gato"
+                            class="avatar">
+                        <p>Pedro</p>
+                    </div>
+                    <div id="contenedor-estrellas">
+                        <img src="img/iconos/comentarios-juego/estrella-blanca.png" alt="Icono estrella"
+                            class="estrella">
+                        <img src="img/iconos/comentarios-juego/estrella-blanca.png" alt="Icono estrella"
+                            class="estrella">
+                        <img src="img/iconos/comentarios-juego/estrella-blanca.png" alt="Icono estrella"
+                            class="estrella">
+                        <img src="img/iconos/comentarios-juego/estrella-blanca.png" alt="Icono estrella"
+                            class="estrella">
+                        <img src="img/iconos/comentarios-juego/estrella-blanca.png" alt="Icono estrella"
+                            class="estrella">
+                    </div>
+                    <div id="caja-para-escribir">
+                        <p>¿Qué pensas del juego?</p>
+                    </div>
+                    <div id="caja-iconos-boton">
+                        <div id="iconos-comentarios">
+                            <div class="icono-con-linea">
+                                <a><img src="img/iconos/comentarios-juego/icono-foto.png" alt="Icono foto"></a>
+                            </div>
+                            <div class="icono-con-linea">
+                                <a><img src="img/iconos/comentarios-juego/carita-feliz.png"
+                                        alt="Icono carita feliz"></a>
+                            </div>
+                            <div class="icono-con-linea">
+                                <a><img src="img/iconos/comentarios-juego/letras.png" alt="Cambiar fuente de letra"></a>
+                            </div>
+                        </div>
+                        <div id="caja-boton">
+                            <button class="btn-comentar-responder">Comentar</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="caja-titulo-historial-comentarios">
+                    <div id="titulo-historial-comentarios">
+                        <p id="seccion-mejores">Mejores</p>
+                        <p>Más antiguos</p>
+                        <p>Más recientes</p>
+                    </div>
+                </div>
+                <div id="contenedor-historial-comentarios">
+
+                </div>
+            </div>
+
+            <!-- Banner -->
+            <div id="banner-juego"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="contenedor-footer">
+            <div class="lista-footer">
+                <h3 class="titulo-columna">Sitio</h3>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Políticas de privacidad</a></li>
+                </ul>
+            </div>
+            <div class="lista-footer">
+                <h3 class="titulo-columna">Categorías</h3>
+                <ul>
+                    <li><a href="#">Nuevos</a></li>
+                    <li><a href="#">Recientes</a></li>
+                    <li><a href="#">Favoritos</a></li>
+                    <li><a href="#">Etiquetas</a></li>
+                    <li><a href="#">Todos los juegos</a></li>
+                </ul>
+            </div>
+            <div class="lista-footer">
+                <h3 class="titulo-columna">Comunidad</h3>
+                <ul>
+                    <li><a href="#">Foro de Winnit</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Reglas de la comunidad</a></li>
+                    <li><a href="#">Participá en nuestra encuesta</a></li>
+                    <li><a href="#">Eventos y torneos</a></li>
+                </ul>
+            </div>
+            <div class="lista-footer">
+                <h3 class="titulo-columna">Empresa</h3>
+                <ul>
+                    <li><a href="#">Contactanos</a></li>
+                    <li><a href="#">Sobre nosotros</a></li>
+                    <li><a href="#">Trabajá con nosotros</a></li>
+                    <li><a href="#">Asociaciones y colaboraciones</a></li>
+                    <li><a href="#">Proyectos en curso</a></li>
+                </ul>
+            </div>
+            <div class="suscripcion-copyright">
+                <a href="index.html"><img src="img/iconos/logo-winnit.png" alt="Logo Winnit" id="logo-winnit"></a>
+                <p>¡No te pierdas ninguna novedad!</p>
+                <form action="" class="form-suscripcion">
+                    <input type="email" placeholder="ejemplo@email.com">
+                    <button type="submit" class="btn-subscribirse">
+                        <div class="img-email">
+                            <img src="img/iconos/mail.png" alt="icono de email">
+                        </div>
+                        <span class="txt-btn-subscribirse">Suscribirse</span>
+                    </button>
+                </form>
+                <div class="contenedor-copyright">
+                    <hr>
+                    <p id="copyright" class="">&copy; Copyright 2024 Winnit</p>
+                </div>
+            </div>
+        </div>
+
+        <nav class="redes-footer">
+            <ul>
+                <li><a href="#"><img src="img/iconos/logo-facebook.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="img/iconos/logo-instagram.png" alt="Instagram"></a></li>
+                <li><a href="#"><img src="img/iconos/logo-youtube.png" alt="YouTube"></a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="js/menuCategorias.js"></script>
+    <script src="js/perfilDesplegable.js"></script>
+    <script src="js/paginaJuego.js"></script>
+    <script src="js/comentarios.js"></script>
+    <script src="js/carruseles.js"></script>
+    <script src="js/footer.js"></script>
+
+    <!-- Archivos JS del juego -->
+    <script type="module" src="js/perros-vs-gatos/opcionesJuego.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winnit - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header-login">
+            <a href="index.html"><img src="img/iconos/logo-winnit.png" alt="Logo Winnit" id="logo-winnit"></a>
+    </header>
+
+    <!-- Menú de categorías -->
+    <aside class="contenedor-menu-categorias">
+        <div class="menu-categorias">
+            <ul id="lista-categorias"></ul>
+        </div>
+    </aside>
+
+    <!-- Contenedor principal -->
+    <main id="login" class="contenedor-formulario-inicio">
+        <!-- Imágen de portada -->
+        <figure class="portada-formulario"></figure>
+
+        <!-- Login / Registro -->
+        <section class="contenedor-formulario">
+            <nav class="nav-registro">
+                <h2 id="opcIngreso" class="active">Iniciar Sesión</h2>
+                <h2 id="opcRegistro" class="inactivo">Registrarse</h2>
+            </nav>
+            <section id="formIngreso">
+                <form action="" class="formulario-ingreso">
+                    <div class="contenedor-input">
+                        <div class="input-formulario ancho-completo">
+                            <label class="texto" for="email-login">Email<span class="resaltado">*</span></label>
+                            <input type="email" name="" id="email-login" placeholder="nombre@email.com" required>
+                        </div>
+                        <div class="input-formulario ancho-completo">
+                            <label for="password-login">Contraseña <span class="resaltado">*</span></label>
+                            <input type="password" name="" id="password-login" placeholder="*********" required>
+                            <a href="#" class="link-activo">Olvidé mi contraseña</a>
+                        </div>
+                        <div class="recordar-usuario">
+                            <input type="checkbox" name="" id="recordar-usuario">
+                            <label for="recordar-usuario">Recordame</label>
+                        </div>
+                    </div>
+                    <button id="btn-login" class="btn-principal"><span>Iniciar Sesión</span></button>
+                    <div class="contenedor-form-redes">
+                        <span class="text-redes-sociales"> 
+                            <hr>
+                            <p>O</p>
+                            <hr>
+                        </span>
+                        <div class="redes-sociales">
+                            <a href="#">
+                                <img src="img/iconos/logo-google.png" alt="Google">
+                            </a>
+                            <a href="#">
+                                <img src="img/iconos/logo-facebook.png" alt="Facebook">
+                            </a>
+                            <a href="#">
+                                <img src="img/iconos/logo-x.png" alt="Twiter">
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        
+            <div id="formRegistro" class="oculto">
+                <form class="formulario-registro" action="">
+                    <div class="contenedor-input">
+                        <div class="input-formulario">
+                            <label for="nombre">Nombre<span class="resaltado">*</span></label>
+                            <input type="text" id="nombre" placeholder="nombre" required>
+                        </div>
+        
+                        <div class="input-formulario">
+                            <label for="apellido">Apellido<span class="resaltado">*</span></label>
+                            <input type="text" id="apellido" placeholder="apellido" required>
+                        </div>
+        
+                        <div class="input-formulario">
+                            <label for="nickName">Nickname</label>
+                            <input type="text" id="nickName" placeholder="nombre de usuario">
+                        </div>
+        
+                        <div class="input-formulario">
+                            <label for="fechaNac">Fecha de nacimiento <span class="resaltado">*</span></label>
+                            <input type="date" id="fechaNac" required>
+                        </div>
+        
+                        <div class="input-formulario ancho-completo">
+                            <label for="email-registro">Email <span class="resaltado">*</span></label>
+                            <input type="email" id="email-registro" placeholder="nombre@email.com" required>
+                        </div>
+        
+                        <div class="input-formulario ancho-completo">
+                            <label for="password-registro">Contraseña<span class="resaltado">*</span></label>
+                            <input type="password" id="password-registro" placeholder="*********" required>
+                        </div>
+        
+                        <div class="input-formulario ancho-completo">
+                            <label for="confirmarContraseña">Repetir contraseña <span class="resaltado">*</span></label>
+                            <input type="password" id="confirmarContraseña" placeholder="*********" required>
+                            <p>La contraseña debe tener al menos 6 caracteres e incluir letras y números</p>
+                        </div>
+                    </div>
+                    <div class="input-capcha">
+                        <input type="checkbox" name="capcha" id="capcha" required>
+                        <label for="capcha">No soy un robot</label>
+                        <img src="img/iconos/recaptcha-logo.svg" alt="img captcha">
+                    </div>
+                    <div>
+                        <input type="checkbox" name="condiciones" id="condiciones" required>
+                        <label for="condiciones">Al registrarte aceptás los 
+                            <a href="#" class="negrita">Términos y condiciones de Winnit</a>
+                        </label>
+                    </div>
+                    <button id="btn-registro" class="btn-principal"><span>Registrarse</span></button>
+                    <div class="contenedor-form-redes">
+                        <span class="text-redes-sociales"> 
+                            <hr>
+                            <p>O</p>
+                            <hr>
+                        </span>
+                        <div class="redes-sociales">
+                            <a href="#">
+                                <img src="img/iconos/logo-google.png" alt="Google">
+                            </a>
+                            <a href="#">
+                                <img src="img/iconos/logo-facebook.png" alt="Facebook">
+                            </a>
+                            <a href="#">
+                                <img src="img/iconos/logo-x.png" alt="Twiter">
+                            </a>
+                        </div>
+                    </div>
+                </form>
+                <div class="mensaje-confirmacion">
+                    <div class="circulo">
+                        <img src="img/iconos/icon-ok.png" alt="icono de ok">
+                    </div>
+                    <h2>¡Ya estas registrado!</h2>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/menuCategorias.js"></script>
+    <script src="js/formulario.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+</html>

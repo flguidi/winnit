@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winnit - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="iconos">
+            <img src="img/iconos/menu-hamburguesa.png" alt="Menú Hamburguesa" class="icon-hover" id="menu-hamburguesa">
+            <a href="index.html"><img src="img/iconos/logo-winnit.png" alt="Logo Winnit" id="logo-winnit"></a>
+        </div>
+        <div id="contenedor-buscador">
+            <input type="text" placeholder="Buscar">
+            <img src="img/iconos/lupa.png" alt="Ícono lupa" id="imagen-lupa">
+        </div>
+        <div class="iconos">
+            <img src="img/iconos/carrito.png" alt="Carrito de compras" class="imagen-iconos icon-hover">
+            <img src="img/iconos/perfil-desplegable/foto-de-perfil.png" alt="Perfil de usuario" class="imagen-iconos icon-hover" id="icono-perfil">
+        </div>
+    </header>
+
+    <!-- Menú de categorías -->
+    <aside class="contenedor-menu-categorias">
+        <div class="menu-categorias">
+            <ul id="lista-categorias"></ul>
+        </div>
+    </aside>
+
+    <!-- Perfil desplegable -->
+    <aside id="contendor-perfil-desplegable">
+        <div class="perfil-desplegable">
+            <div id="cruz-salir">
+                <img src="img/iconos/perfil-desplegable/cruz-salir.png" alt="Cruz para cerrar menú" id="cerrar-perfil">
+            </div>
+            <div id="avatar-mail">
+                <img src="img/iconos/perfil-desplegable/foto-de-perfil.png" alt="Ávatar del usuario" id="foto-de-perfil">
+                <p id="nickname">@Pedro</p>
+                <p id="email">pedrito@gmail.com</p>
+            </div>
+            <div id="items-perfil-desplegable">
+                <ul>
+                    <li>
+                        <img src="img/iconos/perfil-desplegable/icono-de-perfil.png" alt="Ícono de perfil">
+                        <a href="#">
+                            <p>Mi perfil</p>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="img/iconos/perfil-desplegable/editar.png" alt="Ícono para editar perfil">
+                        <a href="#">
+                            <p>Editar perfil</p>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="img/iconos/perfil-desplegable/privacidad-de-la-cuenta.png" alt="Ícono para configurar la privacidad de la cuenta">
+                        <a href="#">
+                            <p>Privacidad de la cuenta</p>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="img/iconos/perfil-desplegable/configuracion.png" alt="Ícono para configurar la cuenta">
+                        <a href="#">
+                            <p>Configuración de la cuenta</p>
+                        </a>
+                    </li>
+                    <li id="cerrar-sesion"> 
+                        <img src="img/iconos/perfil-desplegable/logout.png" alt="Ícono para cerrar sesión">
+                        <a href="login.html">
+                            <p>Cerrar sesión</p>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="img/iconos/perfil-desplegable/soporte.png" alt="Ícono de soporte técnico">
+                        <a href="#">
+                            <p>Soporte</p>
+                        </a>
+                    </li>
+                    <li>
+                        <img src="img/iconos/perfil-desplegable/descargar.png" alt="Ícono para descargar la aplicación">
+                        <a href="#">
+                            <p>Descargar aplicación</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="redes-sociales">
+                <a href="#">
+                    <img src="img/iconos/logo-facebook.png" alt="Facebook">
+                </a>
+                <a href="#">
+                    <img src="img/iconos/logo-instagram.png" alt="Instagram">
+                </a>
+                <a href="#">
+                    <img src="img/iconos/logo-youtube.png" alt="Youtube">
+                </a>
+            </div>
+        </div>
+    </aside>
+   
+    <!-- Contenedor principal -->
+    <main id="home">
+        <!-- Imagen Hero -->
+        <section id="imagen-hero">
+            <div id="info-juego">
+                <p>Juegos clásicos</p>
+                <h1>4 en línea</h1>
+                <button>Jugar ahora <span id="flecha-jugar">⯈</span></button>
+            </div>
+            <button class="hero-flecha-izquierda">❮</button>
+            <button class="hero-flecha-derecha">❯</button>
+        </section>
+
+        <!-- Carruseles -->
+        <section id="carruseles-juegos">
+            <div class="categoria" data-tipo="accion">
+                <h1>Juegos de acción</h1>
+                <div class="carrusel"></div>
+            </div>
+            <div class="categoria" data-tipo="aventura">
+                <h1>Juegos de aventura</h1>
+                <div class="carrusel"></div>
+            </div>
+            <div class="categoria" data-tipo="clasicos">
+                <h1>Juegos clásicos</h1>
+                <div class="carrusel"></div>
+            </div>
+            <div class="categoria" data-tipo="destacados">
+                <h1>Juegos destacados</h1>
+                <div class="carrusel"></div>
+            </div>
+            <div class="categoria" data-tipo="futbol">
+                <h1>Juegos de fútbol</h1>
+                <div class="carrusel"></div>
+            </div>
+        </section>
+
+        <!-- Banner Home -->
+        <figure>
+            <div id="banner-home"></div>
+        </figure>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="contenedor-footer">
+            <div class="lista-footer">
+                <h3 class="titulo-columna">Sitio</h3>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Ayuda</a></li>
+                    <li><a href="#">Cookies</a></li>
+                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#">Políticas de privacidad</a></li>
+                </ul>
+            </div>
+            <div class="lista-footer">
+                <h3 class="titulo-columna">Categorías</h3>
+                <ul>
+                    <li><a href="#">Nuevos</a></li>
+                    <li><a href="#">Recientes</a></li>
+                    <li><a href="#">Favoritos</a></li>
+                    <li><a href="#">Etiquetas</a></li>
+                    <li><a href="#">Todos los juegos</a></li>
+                </ul>
+            </div>
+            <div class="lista-footer">
+                <h3 class="titulo-columna">Comunidad</h3>
+                <ul>
+                    <li><a href="#">Foro de Winnit</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                    <li><a href="#">Reglas de la comunidad</a></li>
+                    <li><a href="#">Participá en nuestra encuesta</a></li>
+                    <li><a href="#">Eventos y torneos</a></li>
+                </ul>
+            </div>
+            <div class="lista-footer">
+                <h3 class="titulo-columna">Empresa</h3>
+                <ul>
+                    <li><a href="#">Contactanos</a></li>
+                    <li><a href="#">Sobre nosotros</a></li>
+                    <li><a href="#">Trabajá con nosotros</a></li>
+                    <li><a href="#">Asociaciones y colaboraciones</a></li>
+                    <li><a href="#">Proyectos en curso</a></li>
+                </ul>
+            </div>
+
+            <div class="suscripcion-copyright">
+                <a href="index.html"><img src="img/iconos/logo-winnit.png" alt="Logo Winnit" id="logo-winnit"></a>
+                <p>¡No te pierdas ninguna novedad!</p>
+                <form action="" class="form-suscripcion">
+                    <input type="email" placeholder="ejemplo@email.com">
+                    <button type="submit" class="btn-subscribirse">
+                        <div class="img-email">
+                            <img src="img/iconos/mail.png" alt="icono de email">
+                        </div>
+                        <span class="txt-btn-subscribirse">Suscribirse</span>
+                    </button>
+                </form>
+                <div class="contenedor-copyright">
+                    <hr>
+                    <p id="copyright" class="">&copy; Copyright 2024 Winnit</p>
+                </div>
+            </div>
+        </div>
+
+        <nav class="redes-footer">
+            <ul>
+                <li><a href="#"><img src="img/iconos/logo-facebook.png" alt="Facebook"></a></li>
+                <li><a href="#"><img src="img/iconos/logo-instagram.png" alt="Instagram"></a></li>
+                <li><a href="#"><img src="img/iconos/logo-youtube.png" alt="YouTube"></a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="js/carga.js"></script>
+    <script src="js/imagenHero.js"></script>
+    <script src="js/carruseles.js"></script>
+    <script src="js/menuCategorias.js"></script>
+    <script src="js/perfilDesplegable.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+
+</html>
